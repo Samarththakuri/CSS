@@ -9,48 +9,200 @@
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         margin: 0;
         padding: 20px;
-        background: linear-gradient(90deg, #000000, #434343);
+        background: radial-gradient(circle at top, #0a0a0a, #000000 70%);
+        color: #f1c40f; /* Batman yellow */
       }
-      .nav-container {
-        margin-bottom: 10px;
-      }
+
       h2 {
         margin-bottom: 10px;
-        color: #dddddd;
+        color: #f1c40f;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+        font-family: "Impact", sans-serif;
+        letter-spacing: 2px;
       }
-      .nav1 {
-        /* yeh check keliye border daal de 
-         border: 2px solid red;*/
 
-        background: linear-gradient(90deg, #000000, #434343);
+      .nav-container {
+        margin-bottom: 30px;
+        padding: 15px;
+        border-radius: 10px;
+        background: rgba(15, 15, 15, 0.8);
+        box-shadow: 0 0 25px rgba(241, 196, 15, 0.2);
       }
-      /* nav1 ke andr ke ul */
+
+      /* Nav1 */
+      .nav1 {
+        background: transparent;
+      }
+
       .nav1 ul {
         list-style: none;
         display: flex;
-        gap: 1.5em;
+        gap: 2em;
       }
+
       .nav1 li {
         display: inline;
-        text-decoration-color: #dddddd;
       }
+
       .nav1 a {
-        background: rgba(150, 149, 149, 0.712);
-        backdrop-filter: blur(4px);
+        background: rgba(30, 30, 30, 0.85);
+        padding: 8px 14px;
         border-radius: 6px;
-        text-decoration: ghostwhite;
-        text-decoration-color: aqua;
-        color: #434343;
+        color: #f1c40f;
+        text-decoration: none;
+        position: relative;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: background 0.3s ease;
       }
+
+      .nav1 a:hover {
+        background: #f1c40f;
+        color: #0a0a0a;
+        box-shadow: 0 0 12px rgba(241, 196, 15, 0.6);
+      }
+
+      .nav1 a::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #f1c40f;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .nav1 a:hover::after {
+        transform: scaleX(1);
+      }
+
       .nav1 .login-btn {
-        background-color: #434343;
+        background-color: #f1c40f;
+        padding: 8px 14px;
+        color: #0a0a0a;
         cursor: pointer;
         border: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: all 0.3s ease;
       }
-      /* a mein hamane extra content dala issliye par badme uske*/
-      .nav1 a::after {
+
+      .nav1 .login-btn:hover {
+        background: #0a0a0a;
+        color: #f1c40f;
+        box-shadow: 0 0 15px rgba(241, 196, 15, 0.7);
       }
-      .navi a::hover::after {
+
+      /* Nav2 */
+      .nav2 ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .nav2 li {
+        margin: 10px 0;
+      }
+
+      .nav2 a {
+        display: block;
+        background: #1a1a1a;
+        padding: 10px;
+        border-radius: 6px;
+        color: #f1c40f;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .nav2 a:hover {
+        background: #f1c40f;
+        color: #0a0a0a;
+      }
+
+      .nav2 .login-btn {
+        margin-top: 10px;
+        background: #f1c40f;
+        border: none;
+        padding: 10px;
+        color: #0a0a0a;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .nav2 .login-btn:hover {
+        background: #0a0a0a;
+        color: #f1c40f;
+      }
+
+      /* Nav3 with dropdown */
+      .nav3 ul {
+        list-style: none;
+        display: flex;
+        gap: 2em;
+        padding: 0;
+      }
+
+      .nav3 li {
+        position: relative;
+      }
+
+      .nav3 a {
+        background: rgba(30, 30, 30, 0.85);
+        padding: 8px 14px;
+        border-radius: 6px;
+        color: #f1c40f;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s ease;
+      }
+
+      .nav3 a:hover {
+        background: #f1c40f;
+        color: #0a0a0a;
+      }
+
+      .nav3 .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 120%;
+        left: 0;
+        background: #111;
+        border-radius: 6px;
+        box-shadow: 0 0 15px rgba(241, 196, 15, 0.4);
+      }
+
+      .nav3 .dropdown-content a {
+        display: block;
+        padding: 10px;
+        color: #f1c40f;
+      }
+
+      .nav3 .dropdown-content a:hover {
+        background: #f1c40f;
+        color: #0a0a0a;
+      }
+
+      .nav3 .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .nav3 .login-btn {
+        background-color: #f1c40f;
+        padding: 8px 14px;
+        color: #0a0a0a;
+        border: none;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .nav3 .login-btn:hover {
+        background: #0a0a0a;
+        color: #f1c40f;
+        box-shadow: 0 0 15px rgba(241, 196, 15, 0.7);
       }
     </style>
   </head>
@@ -100,4 +252,3 @@
     </div>
   </body>
 </html>
-do not modify it but make ui better
