@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sexy Modern Page</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Base Styles */
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #16213e);
+        color: #e0e0e0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* Navbar Container */
+      .nav1 {
+        width: 90%;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 20px;
+        background: rgba(30, 30, 30, 0.6);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      }
+
+      /* Nav Links */
+      .nav1 a {
+        color: #e0e0e0;
+        text-decoration: none;
+        padding: 10px 18px;
+        border-radius: 10px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .nav1 a:hover {
+        background: linear-gradient(90deg, #434343, #6c6c6c);
+        color: #00ffcc;
+        box-shadow: 0 4px 15px rgba(0, 255, 204, 0.3);
+      }
+
+      /* Login Button */
+      .login-btn {
+        background: linear-gradient(90deg, #00ffcc, #007bff);
+        color: #000;
+        padding: 10px 22px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .login-btn:hover {
+        background: linear-gradient(90deg, #007bff, #00ffcc);
+        box-shadow: 0 4px 20px rgba(0, 255, 204, 0.6);
+      }
+
+      /* Dropdown */
+      .nav3 {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background: rgba(20, 20, 20, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        min-width: 180px;
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: #ddd;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .dropdown-content a:hover {
+        background: linear-gradient(90deg, #434343, #00ffcc);
+        color: #000;
+      }
+
+      .nav3:hover .dropdown-content {
+        display: block;
+        animation: fadeIn 0.3s ease;
+      }
+
+      /* Headings */
+      h2 {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 20px 0 14px 0;
+        background: linear-gradient(90deg, #00ffcc, #007bff);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+      }
+
+      /* UL Styling */
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 auto;
+        width: 80%;
+        max-width: 600px;
+      }
+
+      ul li {
+        background: rgba(255, 255, 255, 0.05);
+        margin: 12px 0;
+        padding: 14px 18px;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+      }
+
+      ul li:hover {
+        background: rgba(255, 255, 255, 0.12);
+        transform: translateY(-3px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="nav1">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <div class="nav3">
+        <a href="#">More ▾</a>
+        <div class="dropdown-content">
+          <a href="#">Gallery</a>
+          <a href="#">Contact</a>
+          <a href="#">Help</a>
+        </div>
+      </div>
+      <button class="login-btn">Login</button>
+    </div>
+
+    <!-- Page Content -->
+    <h2>Welcome to the Sexy Modern UI 🌌</h2>
+    <ul>
+      <li>🔥 Neon hover navigation</li>
+      <li>✨ Glassmorphism navbar</li>
+      <li>🌈 Gradient text headings</li>
+      <li>🎨 Smooth hover animations</li>
+      <li>🚀 Premium look and feel</li>
+    </ul>
+  </body>
+</html>
